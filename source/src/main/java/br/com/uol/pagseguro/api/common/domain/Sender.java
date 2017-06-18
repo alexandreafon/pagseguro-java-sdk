@@ -71,5 +71,5 @@ public interface Sender {
    */
   String getHash();
 
-  List<SenderDocumentXML> getDocuments(); // Alexandre Afonso
+  List<? extends SenderDocument> getDocuments(); // Alexandre Afonso
 }
