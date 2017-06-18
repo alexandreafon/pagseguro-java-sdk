@@ -25,6 +25,7 @@ import java.util.List;
 import br.com.uol.pagseguro.api.common.domain.Address;
 import br.com.uol.pagseguro.api.common.domain.Phone;
 import br.com.uol.pagseguro.api.common.domain.Sender;
+import br.com.uol.pagseguro.api.common.domain.SenderDocument;
 import br.com.uol.pagseguro.api.utils.Builder;
 
 /**
