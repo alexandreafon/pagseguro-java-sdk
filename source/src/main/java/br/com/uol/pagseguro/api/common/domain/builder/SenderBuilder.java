@@ -191,6 +191,10 @@ public final class SenderBuilder implements Builder<Sender> {
       return senderBuilder.hash;
     }
 
+    @Override
+    public List<SenderDocument> getDocuments() { // Alexandre Afonso
+      return documents;
+    }
   }
 
 }
