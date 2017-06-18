@@ -1,7 +1,5 @@
 package br.com.uol.pagseguro.api.common.domain.xml;
 
-import java.math.BigDecimal;
-
 import javax.xml.bind.annotation.XmlElement;
 
 import br.com.uol.pagseguro.api.common.domain.SenderDocument;

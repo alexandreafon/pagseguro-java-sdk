@@ -70,4 +70,6 @@ public interface Sender {
    * @return Hash
    */
   String getHash();
+
+  List<SenderDocumentXML> getDocuments(); // Alexandre Afonso
 }

@@ -1,7 +1,5 @@
 package br.com.uol.pagseguro.api.common.domain;
 
-import java.math.BigDecimal;
-
 /**
  *
  * @author Alexandre Afonso.
