@@ -47,6 +47,8 @@ public final class SenderBuilder implements Builder<Sender> {
 
   private String hash;
 
+  private List<SenderDocument> documents; // Alexandre Afonso
+
   /**
    * Set email of sender
    *
@@ -142,6 +144,11 @@ public final class SenderBuilder implements Builder<Sender> {
     return this;
   }
 
+  public SenderBuilder withDocuments(List<SenderDocument> documents) {
+    this.documents = documents;
+    return this;
+  }
+
   /**
    * Build the sender
    *
@@ -196,7 +203,7 @@ public final class SenderBuilder implements Builder<Sender> {
 
     @Override
     public List<SenderDocument> getDocuments() { // Alexandre Afonso
-      return documents;
+      return senderBuilder.documents;
     }
   }
 
