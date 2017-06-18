@@ -20,7 +20,11 @@
  */
 package br.com.uol.pagseguro.api.common.domain.xml;
 
+import java.util.List;
+
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import br.com.uol.pagseguro.api.common.domain.Sender;
 
@@ -42,6 +46,8 @@ public class SenderXML implements Sender {
   private String cpf;
 
   private String hash;
+
+  private List<SenderDocumentXML> documents; // Alexandre Afonso
 
   SenderXML() {
   }
@@ -106,6 +112,17 @@ public class SenderXML implements Sender {
     this.hash = hash;
   }
 
+  @XmlElement(name = "document")
+  @XmlElementWrapper(name = "documents")
+  public void setDocuments(List<SenderDocumentXML> documents) {
+    this.documents = documents;
+  }
+
+  @Override
+  public List<SenderDocumentXML> getDocuments() {
+    return documents;
+  }
+
   @Override
   public String toString() {
     return "SenderXML{" +
@@ -115,6 +132,7 @@ public class SenderXML implements Sender {
         ", address=" + address +
         ", cpf='" + cpf + '\'' +
         ", hash='" + hash + '\'' +
+        ", documents='" + documents + '\'' +
         '}';
   }
 }
