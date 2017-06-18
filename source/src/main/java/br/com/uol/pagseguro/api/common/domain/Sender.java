@@ -20,6 +20,8 @@
  */
 package br.com.uol.pagseguro.api.common.domain;
 
+import java.util.List;
+
 /**
  * Interface for Sender. This class contains the buyer data.
  *
